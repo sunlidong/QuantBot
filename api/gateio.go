@@ -7,8 +7,8 @@ import (
 
 	"github.com/bitly/go-simplejson"
 	"github.com/miaolz123/conver"
-	"github.com/phonegapX/QuantBot/constant"
-	"github.com/phonegapX/QuantBot/model"
+	"quantbot/constant"
+	"quantbot/model"
 )
 
 // GateIo the exchange struct of gateio.io

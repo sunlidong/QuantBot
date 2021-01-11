@@ -3,15 +3,16 @@ package handler
 import (
 	"fmt"
 
+	"quantbot/constant"
+	"quantbot/model"
+
 	"github.com/hprose/hprose-golang/rpc"
-	"github.com/phonegapX/QuantBot/constant"
-	"github.com/phonegapX/QuantBot/model"
 )
 
 type user struct{}
 
 // Login ...
-func (user) Login(username, password string, ctx rpc.Context) (resp response) {
+func (user) Loginbz(username, password string, ctx rpc.Context) (resp response) {
 	user := model.User{
 		Username: username,
 		Password: password,
@@ -29,6 +30,30 @@ func (user) Login(username, password string, ctx rpc.Context) (resp response) {
 	} else {
 		resp.Message = "Make token error"
 	}
+	return
+}
+
+// Login ...
+func (user) Login(username, password string, ctx rpc.Context) (resp response) {
+	user := model.User{
+		Username: username,
+		Password: password,
+	}
+	if user.Username == "" || user.Password == "" {
+		resp.Message = "Username and Password can not be empty"
+		return
+	}
+	// if err := model.DB.Where(&user).First(&user).Error; err != nil {
+	// 	resp.Message = "Username or Password wrong"
+	// 	return
+	// }
+	if resp.Data = makeToken(user.Username); resp.Data != "" {
+		resp.Success = true
+	} else {
+		resp.Message = "Make token error"
+	}
+	fmt.Println("=> user:", user.Username)
+	resp.Success = true
 	return
 }
 

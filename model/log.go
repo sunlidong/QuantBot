@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"time"
 
-	"github.com/phonegapX/QuantBot/constant"
+	"quantbot/constant"
 )
 
 // Log struct

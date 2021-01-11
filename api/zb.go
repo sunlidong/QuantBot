@@ -5,10 +5,11 @@ import (
 	"strings"
 	"time"
 
+	"quantbot/api/ZbAPI"
+	"quantbot/constant"
+	"quantbot/model"
+
 	"github.com/miaolz123/conver"
-	"github.com/phonegapX/QuantBot/api/ZbAPI"
-	"github.com/phonegapX/QuantBot/constant"
-	"github.com/phonegapX/QuantBot/model"
 )
 
 // Zb the exchange struct of zb.com

@@ -5,9 +5,9 @@ import (
 	"fmt"
 	"strconv"
 
-	"github.com/phonegapX/QuantBot/api/HuobiProAPI/config"
-	"github.com/phonegapX/QuantBot/api/HuobiProAPI/models"
-	"github.com/phonegapX/QuantBot/api/HuobiProAPI/untils"
+	"quantbot/api/HuobiProAPI/config"
+	"quantbot/api/HuobiProAPI/models"
+	"quantbot/api/HuobiProAPI/untils"
 )
 
 // 批量操作的API下个版本再封装

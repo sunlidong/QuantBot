@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/phonegapX/QuantBot/constant"
+	"quantbot/constant"
 )
 
 // Trader struct

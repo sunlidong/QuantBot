@@ -8,10 +8,11 @@ import (
 	"sync"
 	"time"
 
+	"quantbot/api"
+	"quantbot/constant"
+	"quantbot/model"
+
 	"github.com/miaolz123/conver"
-	"github.com/phonegapX/QuantBot/api"
-	"github.com/phonegapX/QuantBot/constant"
-	"github.com/phonegapX/QuantBot/model"
 	"github.com/robertkrimen/otto"
 )
 
@@ -44,7 +45,7 @@ func (g *Global) Sleep(intervals ...interface{}) {
 	if interval > 0 {
 		time.Sleep(time.Duration(interval * 1000000))
 	} else {
-		for _, e := range g.es {
+		for _, e := range g.es {                                                                                                                                                                                  
 			e.AutoSleep()
 		}
 	}

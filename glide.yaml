@@ -15,7 +15,7 @@ import:
   version: ~3.2.0
 - package: github.com/go-ini/ini
   version: ~1.38.1
-- package: github.com/go-resty/resty
+- package: gopkg.in/resty.v1
   version: ~1.8.0
 - package: github.com/hprose/hprose-golang
   version: ~2.0.4
